@@ -1,0 +1,467 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Georgia', serif;
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    color: #333;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+.header {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    padding: 30px;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 12px;
+    object-fit: contain;
+}
+
+.header-text h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #2c2c2c;
+    margin-bottom: 5px;
+}
+
+.header-text p {
+    font-size: 1.1rem;
+    color: #666;
+}
+
+/* Main Content Layout */
+.main-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* Form Section */
+.form-section {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.form-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    color: #2c2c2c;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #333333;
+    padding-bottom: 10px;
+}
+
+.signature-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    font-weight: 600;
+    color: #2c2c2c;
+    margin-bottom: 8px;
+    font-size: 0.95rem;
+}
+
+.form-group input {
+    padding: 12px 16px;
+    border: 2px solid #e9ecef;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: #fafafa;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: #333333;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(51, 51, 51, 0.1);
+}
+
+.form-group input:required {
+    border-left: 4px solid #333333;
+}
+
+.form-actions {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* Preview Section */
+.preview-section {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+}
+
+.preview-section h2 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.8rem;
+    color: #2c2c2c;
+    margin-bottom: 25px;
+    border-bottom: 3px solid #666666;
+    padding-bottom: 10px;
+}
+
+.preview-container {
+    background: #f8f9fa;
+    border: 2px dashed #dee2e6;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    min-height: 200px;
+}
+
+.signature-preview {
+    background: white;
+    padding: 20px;
+    border-radius: 6px;
+    border: 1px solid #e9ecef;
+}
+
+.placeholder {
+    text-align: center;
+    color: #6c757d;
+    padding: 40px 20px;
+}
+
+.placeholder p {
+    font-size: 1.1rem;
+}
+
+/* Buttons */
+.btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    justify-content: center;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #333333 0%, #555555 100%);
+    color: white;
+    box-shadow: 0 2px 4px rgba(51, 51, 51, 0.3);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #222222 0%, #333333 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(51, 51, 51, 0.4);
+}
+
+.btn-secondary {
+    background: #6c757d;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background: #5a6268;
+    transform: translateY(-2px);
+}
+
+.btn-success {
+    background: linear-gradient(135deg, #4CAF50 0%, #66BB6A 100%);
+    color: white;
+    box-shadow: 0 2px 4px rgba(76, 175, 80, 0.3);
+}
+
+.btn-success:hover {
+    background: linear-gradient(135deg, #388E3C 0%, #4CAF50 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.4);
+}
+
+.btn-info {
+    background: #17a2b8;
+    color: white;
+}
+
+.btn-info:hover {
+    background: #138496;
+    transform: translateY(-2px);
+}
+
+.btn-warning {
+    background: #fd7e14;
+    color: white;
+}
+
+.btn-warning:hover {
+    background: #e8681a;
+    transform: translateY(-2px);
+}
+
+/* Action Buttons */
+.action-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 20px;
+}
+
+/* Copy Status */
+.copy-status {
+    background: #d4edda;
+    color: #155724;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+    border: 1px solid #c3e6cb;
+}
+
+/* Modal */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    max-width: 600px;
+    width: 100%;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    border-bottom: 1px solid #e9ecef;
+}
+
+.modal-header h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #2c2c2c;
+    margin: 0;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: #6c757d;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.close-btn:hover {
+    background: #f8f9fa;
+    color: #2c2c2c;
+}
+
+.modal-body {
+    padding: 30px;
+}
+
+.modal-body ol {
+    padding-left: 20px;
+}
+
+.modal-body li {
+    margin-bottom: 12px;
+    line-height: 1.6;
+}
+
+.tip-box {
+    background: #fff3cd;
+    border: 1px solid #ffeaa7;
+    border-radius: 8px;
+    padding: 15px;
+    margin-top: 20px;
+    color: #856404;
+}
+
+/* Generated Signature Styles (Email-safe) */
+.generated-signature {
+    font-family: Arial, sans-serif;
+    color: #333333;
+    max-width: 600px;
+}
+
+.generated-signature table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.generated-signature td {
+    vertical-align: middle;
+    padding: 0;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #6c757d;
+    border-top: 1px solid #e9ecef;
+    margin-top: 30px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .main-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .header-content {
+        flex-direction: column;
+        text-align: center;
+        gap: 15px;
+    }
+    
+    .header-text h1 {
+        font-size: 2rem;
+    }
+    
+    .form-actions {
+        flex-direction: column;
+    }
+    
+    .action-buttons {
+        flex-direction: column;
+    }
+    
+    .btn {
+        width: 100%;
+    }
+    
+    .container {
+        padding: 15px;
+    }
+    
+    .header, .form-section, .preview-section {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-text h1 {
+        font-size: 1.6rem;
+    }
+    
+    .form-section h2, .preview-section h2 {
+        font-size: 1.4rem;
+    }
+    
+    .modal-content {
+        margin: 10px;
+    }
+    
+    .modal-header, .modal-body {
+        padding: 20px;
+    }
+}
+
+/* Animation for smooth transitions */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.signature-preview {
+    animation: fadeIn 0.3s ease;
+}
+
+/* Focus indicators for accessibility */
+.btn:focus,
+input:focus {
+    outline: 2px solid #333333;
+    outline-offset: 2px;
+}
+
+/* Loading state */
+.loading {
+    opacity: 0.6;
+    pointer-events: none;
+}
+
+.loading::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 20px;
+    height: 20px;
+    margin: -10px 0 0 -10px;
+    border: 2px solid #333333;
+    border-top: 2px solid transparent;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
