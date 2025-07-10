@@ -129,8 +129,8 @@ class SignatureGenerator {
         return `
             <table cellpadding="0" cellspacing="0" border="0" style="font-family: 'Montserrat', Arial, sans-serif; color: #333333; max-width: 500px; width: 100%;">
                 <tr>
-                    <td style="vertical-align: middle; padding-right: 15px; width: 110px;">
-                        <img src="logo.png" width="95" alt="J Square Photography Logo" style="display: block; height: auto; max-height: 110px;">
+                    <td style="vertical-align: middle; padding-right: 15px; width: 130px;">
+                        <img src="logo.png" width="115" alt="J Square Photography Logo" style="display: block; height: auto; max-height: 130px;">
                     </td>
                     <td style="vertical-align: middle; padding-left: 5px;">
                         <table cellpadding="0" cellspacing="0" border="0">
