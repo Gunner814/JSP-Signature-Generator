@@ -1,33 +1,35 @@
-# Sunflower Email Signature Generator
+# J Square Photography Email Signature Generator
 
-A professional email signature generator for Sunflower Childcare Group employees. This tool allows team members to create consistent, branded email signatures that work across all email clients.
+A professional email signature generator for J Square Photography. This tool allows team members to create consistent, branded email signatures that work across all email clients.
 
-🌻 **Live Demo:** [https://gunner814.github.io/sunflower-signature-generator](https://gunner814.github.io/sunflower-signature-generator)
+📸 **Live Demo:** [https://gunner814.github.io/JSP-Signature-Generator](https://gunner814.github.io/JSP-Signature-Generator)
 
-![Sunflower Logo](https://lh3.googleusercontent.com/d/1jyMkGfMMrs3oraejoV_0Du1PLBT-QOWJ)
+![J Square Photography](logo.png)
 
 ## Features
 
-- ✅ **Professional Design** - Matches company branding with Sunflower logo
+- ✅ **Professional Design** - Matches company branding with J Square Photography logo
 - ✅ **Real-time Preview** - See your signature as you type
 - ✅ **Easy Integration** - One-click copy to Gmail and other email clients
 - ✅ **Mobile Responsive** - Works on desktop, tablet, and mobile devices
 - ✅ **Form Validation** - Ensures all required fields are completed correctly
 - ✅ **Download Option** - Save signature as HTML file for manual installation
 - ✅ **Auto-save** - Remembers your information for future visits
-- ✅ **Social Media Links** - Optional Facebook and Instagram integration
-- ✅ **Location Field** - Optional location/address information
+- ✅ **Social Media Links** - Instagram, Facebook, and LinkedIn integration
+- ✅ **Phone Number** - Optional phone number field
+- ✅ **Clean Layout** - Logo on left, contact info on right (matching brand guidelines)
 
 ## How to Use
 
 1. **Fill in your information:**
    - Full Name (required)
-   - Job Title (required)
+   - Job Title (required) - e.g., "Founder, J Square Photography"
    - Email Address (required)
    - Website (optional)
+   - Phone Number (optional)
    - Facebook Page URL (optional)
    - Instagram Handle (optional)
-   - Location (optional)
+   - LinkedIn Profile (optional)
 
 2. **Generate your signature:**
    - Click "Generate Signature"
@@ -38,16 +40,27 @@ A professional email signature generator for Sunflower Childcare Group employees
    - Follow the built-in Gmail setup instructions
    - Or download the HTML file for manual installation
 
+## Signature Layout
+
+The signature follows the J Square Photography brand guidelines:
+- **Left Side**: J Square Photography logo
+- **Right Side**: Contact information (name, title, phone, website)
+- **Bottom**: Social media icons (Instagram, Facebook, LinkedIn)
+
 ## Technical Details
 
 ### File Structure
 ```
-sunflower-signature-generator/
+JSP-Signature-Generator/
 ├── index.html          # Main application page
 ├── css/
 │   └── style.css       # Responsive styling
 ├── js/
 │   └── signature-generator.js  # Core functionality
+├── logo.png            # J Square Photography logo
+├── 1.png              # Instagram icon
+├── 2.png              # Facebook icon
+├── 3.png              # LinkedIn icon
 └── README.md           # Documentation
 ```
 
@@ -56,7 +69,7 @@ sunflower-signature-generator/
 - **CSS3** - Responsive design with grid and flexbox
 - **Vanilla JavaScript** - No dependencies, fast loading
 - **Google Fonts** - Montserrat font family
-- **Google Drive** - Image hosting for logos and icons
+- **Local Images** - Self-hosted logo and social media icons
 
 ### Browser Compatibility
 - ✅ Chrome 60+
@@ -79,12 +92,12 @@ The generated signatures work with:
 ### Option 1: GitHub Pages (Recommended)
 1. Fork this repository
 2. Enable GitHub Pages in repository settings
-3. Access at: `https://[username].github.io/sunflower-signature-generator`
+3. Access at: `https://[username].github.io/JSP-Signature-Generator`
 
 ### Option 2: Local Development
 1. Clone the repository:
    ```bash
-   git clone https://github.com/[username]/sunflower-signature-generator.git
+   git clone https://github.com/Gunner814/JSP-Signature-Generator.git
    ```
 2. Open `index.html` in your web browser
 3. No build process required!
@@ -99,20 +112,16 @@ The generated signatures work with:
 ### Custom Branding
 To customize for your organization:
 
-1. **Logo**: Replace the Google Drive image URL in `js/signature-generator.js`
-2. **Company Name**: Update "Sunflower Childcare Group Pte Ltd" in the template
+1. **Logo**: Replace `logo.png` with your company logo
+2. **Company Name**: Update "J Square Photography" in the template
 3. **Colors**: Modify CSS variables in `css/style.css`
 4. **Default Website**: Change the fallback website URL
-5. **Social Media Icons**: Replace Google Drive URLs with your own hosted icons
+5. **Social Media Icons**: Replace `1.png`, `2.png`, `3.png` with your own icons
 
-### Icon URLs
-Current icon URLs (hosted on Google Drive):
-- Email: `1X2PDjwAnYgpfh0tQHvZDzRPRUtW2kojn`
-- Website: `12GR50PYa813tP7JJjBEPtZj_PwXkK54f`
-- Facebook: `1mMLCPHvIUWZaD10M9E-kGjyG7JbwUgA7`
-- Instagram: `1-htPqSQUC8JrJXFtIu3U6HmN1VzzAp-l`
-- Location: `1KZeuIwg_PRePcRpzpePNtMTqJ5OVgWnL`
-- Logo: `1jyMkGfMMrs3oraejoV_0Du1PLBT-QOWJ`
+### Social Media Icons
+- `1.png` - Instagram icon
+- `2.png` - Facebook icon  
+- `3.png` - LinkedIn icon
 
 ## Contributing
 
@@ -126,7 +135,7 @@ Current icon URLs (hosted on Google Drive):
 
 - No data is sent to external servers
 - Form data is stored locally in browser only
-- All images are hosted on trusted Google Drive
+- All images are self-hosted for reliability
 - HTTPS recommended for clipboard functionality
 
 ## Support
@@ -138,9 +147,9 @@ For technical support or feature requests:
 
 ## License
 
-© 2025 Sunflower Childcare Group Pte Ltd. All rights reserved.
+© 2025 J Square Photography. All rights reserved.
 
-This signature generator is for internal use by Sunflower Childcare Group employees only.
+This signature generator is designed for J Square Photography team members and business use.
 
 ## Troubleshooting
 
@@ -152,7 +161,7 @@ This signature generator is for internal use by Sunflower Childcare Group employ
 - Check browser clipboard permissions
 
 **Images not displaying:**
-- Verify Google Drive sharing permissions
+- Verify all image files are present
 - Check internet connection
 - Try refreshing the page
 
@@ -168,4 +177,4 @@ This signature generator is for internal use by Sunflower Childcare Group employ
 
 ---
 
-*Built with ❤️ for the Sunflower Childcare Group team*
+*Built with 📸 for the J Square Photography team*
