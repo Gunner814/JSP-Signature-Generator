@@ -129,35 +129,35 @@ class SignatureGenerator {
         return `
             <table cellpadding="0" cellspacing="0" border="0" style="font-family: 'Montserrat', Arial, sans-serif; color: #333333; max-width: 500px; width: 100%;">
                 <tr>
-                    <td style="vertical-align: middle; padding-right: 15px; width: 80px;">
-                        <img src="logo.png" width="60" alt="J Square Photography Logo" style="display: block; height: auto; max-height: 80px;">
+                    <td style="vertical-align: middle; padding-right: 15px; width: 90px;">
+                        <img src="logo.png" width="75" alt="J Square Photography Logo" style="display: block; height: auto; max-height: 90px;">
                     </td>
                     <td style="vertical-align: middle; padding-left: 5px;">
                         <table cellpadding="0" cellspacing="0" border="0">
                             <tr>
-                                <td style="font-family: 'Montserrat', Arial, sans-serif; font-size: 18px; font-weight: 600; color: #2c2c2c; padding-bottom: 4px;">
+                                <td style="font-family: 'Montserrat', Arial, sans-serif; font-size: 18px; font-weight: 600; color: #2c2c2c; padding-bottom: 2px;">
                                     ${data.fullName}
                                 </td>
                             </tr>
                             <tr>
-                                <td style="font-family: 'Montserrat', Arial, sans-serif; font-size: 14px; color: #666666; padding-bottom: 10px;">
+                                <td style="font-family: 'Montserrat', Arial, sans-serif; font-size: 14px; color: #666666; padding-bottom: 6px;">
                                     ${data.jobTitle}
                                 </td>
                             </tr>
                             <tr>
-                                <td style="font-family: 'Montserrat', Arial, sans-serif; font-size: 12px; color: #333333; padding-bottom: 4px;">
+                                <td style="font-family: 'Montserrat', Arial, sans-serif; font-size: 12px; color: #333333; padding-bottom: 2px;">
                                     <a href="mailto:${data.email}" style="color: #333333; text-decoration: none;">${data.email}</a>
                                 </td>
                             </tr>
                             ${data.phone ? `
                             <tr>
-                                <td style="font-family: 'Montserrat', Arial, sans-serif; font-size: 12px; color: #333333; padding-bottom: 4px;">
+                                <td style="font-family: 'Montserrat', Arial, sans-serif; font-size: 12px; color: #333333; padding-bottom: 2px;">
                                     <a href="tel:${data.phone.replace(/\s/g, '')}" style="color: #333333; text-decoration: none;">${data.phone}</a>
                                 </td>
                             </tr>
                             ` : ''}
                             <tr>
-                                <td style="font-family: 'Montserrat', Arial, sans-serif; font-size: 12px; color: #333333; padding-bottom: 10px;">
+                                <td style="font-family: 'Montserrat', Arial, sans-serif; font-size: 12px; color: #333333; padding-bottom: 6px;">
                                     <a href="${websiteUrl}" style="color: #333333; text-decoration: none;">${websiteDisplay}</a>
                                 </td>
                             </tr>
