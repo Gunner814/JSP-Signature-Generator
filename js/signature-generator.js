@@ -59,29 +59,29 @@ class SignatureGenerator {
         const errors = [];
         
         if (!data.fullName) {
-            errors.push('Full Name is required');
+            errors.push('• Full Name is required for your email signature');
         }
         
         if (!data.jobTitle) {
-            errors.push('Job Title is required');
+            errors.push('• Job Title is required (e.g., "Founder, J Square Photography")');
         }
         
         if (!data.email) {
-            errors.push('Email Address is required');
+            errors.push('• Email Address is required for your signature');
         } else if (!this.isValidEmail(data.email)) {
-            errors.push('Please enter a valid email address');
+            errors.push('• Please enter a valid email address (e.g., name@jsquarephotography.com)');
         }
         
         if (data.website && !this.isValidUrl(data.website)) {
-            errors.push('Please enter a valid website URL');
+            errors.push('• Website URL should start with http:// or https://');
         }
         
         if (data.facebook && !this.isValidUrl(data.facebook)) {
-            errors.push('Please enter a valid Facebook URL');
+            errors.push('• Facebook URL should be a complete link (e.g., https://www.facebook.com/jsquarephotography)');
         }
         
         if (data.linkedin && !this.isValidUrl(data.linkedin)) {
-            errors.push('Please enter a valid LinkedIn URL');
+            errors.push('• LinkedIn URL should be a complete link (e.g., https://sg.linkedin.com/company/j-square-photography)');
         }
         
         return errors;
@@ -107,10 +107,17 @@ class SignatureGenerator {
         let instagramDisplay = data.instagram;
         
         if (data.instagram) {
-            // Remove @ if present and create URL
-            const handle = data.instagram.replace('@', '');
-            instagramUrl = `https://www.instagram.com/${handle}/`;
-            instagramDisplay = handle;
+            // Handle different Instagram input formats
+            if (data.instagram.includes('instagram.com/')) {
+                // Full URL provided
+                instagramUrl = data.instagram.startsWith('http') ? data.instagram : `https://${data.instagram}`;
+                instagramDisplay = data.instagram.split('/').pop() || data.instagram;
+            } else {
+                // Handle or @handle provided
+                const handle = data.instagram.replace('@', '');
+                instagramUrl = `https://www.instagram.com/${handle}/`;
+                instagramDisplay = handle;
+            }
         }
 
         // Use default website if none provided
@@ -120,55 +127,60 @@ class SignatureGenerator {
             'www.jsquarephotography.com';
 
         return `
-            <table cellpadding="0" cellspacing="0" border="0" style="font-family: 'Montserrat', Arial, sans-serif; color: #333333; max-width: 500px;">
+            <table cellpadding="0" cellspacing="0" border="0" style="font-family: 'Montserrat', Arial, sans-serif; color: #333333; max-width: 500px; width: 100%;">
                 <tr>
-                    <td style="vertical-align: middle; padding-right: 20px;">
-                        <img src="logo.png" width="80" height="80" alt="J Square Photography Logo" style="display: block;">
+                    <td style="vertical-align: top; padding-right: 15px; width: 80px;">
+                        <img src="logo.png" width="60" alt="J Square Photography Logo" style="display: block; height: auto; max-height: 80px;">
                     </td>
-                    <td style="vertical-align: middle;">
+                    <td style="vertical-align: top; padding-left: 5px;">
                         <table cellpadding="0" cellspacing="0" border="0">
                             <tr>
-                                <td style="font-family: 'Montserrat', Arial, sans-serif; font-size: 18px; font-weight: 600; color: #2c2c2c; padding-bottom: 2px;">
+                                <td style="font-family: 'Montserrat', Arial, sans-serif; font-size: 18px; font-weight: 600; color: #2c2c2c; padding-bottom: 4px;">
                                     ${data.fullName}
                                 </td>
                             </tr>
                             <tr>
-                                <td style="font-family: 'Montserrat', Arial, sans-serif; font-size: 14px; color: #666666; padding-bottom: 8px;">
+                                <td style="font-family: 'Montserrat', Arial, sans-serif; font-size: 14px; color: #666666; padding-bottom: 10px;">
                                     ${data.jobTitle}
+                                </td>
+                            </tr>
+                            <tr>
+                                <td style="font-family: 'Montserrat', Arial, sans-serif; font-size: 12px; color: #333333; padding-bottom: 4px;">
+                                    <a href="mailto:${data.email}" style="color: #333333; text-decoration: none;">${data.email}</a>
                                 </td>
                             </tr>
                             ${data.phone ? `
                             <tr>
-                                <td style="font-family: 'Montserrat', Arial, sans-serif; font-size: 12px; color: #333333; padding-bottom: 3px;">
-                                    ${data.phone}
+                                <td style="font-family: 'Montserrat', Arial, sans-serif; font-size: 12px; color: #333333; padding-bottom: 4px;">
+                                    <a href="tel:${data.phone.replace(/\s/g, '')}" style="color: #333333; text-decoration: none;">${data.phone}</a>
                                 </td>
                             </tr>
                             ` : ''}
                             <tr>
-                                <td style="font-family: 'Montserrat', Arial, sans-serif; font-size: 12px; color: #333333; padding-bottom: 8px;">
+                                <td style="font-family: 'Montserrat', Arial, sans-serif; font-size: 12px; color: #333333; padding-bottom: 10px;">
                                     <a href="${websiteUrl}" style="color: #333333; text-decoration: none;">${websiteDisplay}</a>
                                 </td>
                             </tr>
                             <tr>
                                 <td>
-                                    <table cellpadding="0" cellspacing="0" border="0">
+                                    <table cellpadding="0" cellspacing="0" border="0" style="margin-top: 2px;">
                                         <tr>
                                             ${data.instagram ? `
-                                            <td style="padding-right: 8px;">
+                                            <td style="padding-right: 10px;">
                                                 <a href="${instagramUrl}" style="text-decoration: none;">
                                                     <img src="1.png" width="24" height="24" alt="Instagram" style="display: block; border: 0;">
                                                 </a>
                                             </td>
                                             ` : ''}
                                             ${data.facebook ? `
-                                            <td style="padding-right: 8px;">
+                                            <td style="padding-right: 10px;">
                                                 <a href="${data.facebook}" style="text-decoration: none;">
                                                     <img src="2.png" width="24" height="24" alt="Facebook" style="display: block; border: 0;">
                                                 </a>
                                             </td>
                                             ` : ''}
                                             ${data.linkedin ? `
-                                            <td style="padding-right: 8px;">
+                                            <td style="padding-right: 10px;">
                                                 <a href="${data.linkedin}" style="text-decoration: none;">
                                                     <img src="3.png" width="24" height="24" alt="LinkedIn" style="display: block; border: 0;">
                                                 </a>
