@@ -132,7 +132,7 @@ class SignatureGenerator {
                     <td style="vertical-align: middle; padding-right: 15px; width: 130px;">
                         <img src="logo.png" width="115" alt="J Square Photography Logo" style="display: block; height: auto; max-height: 130px;">
                     </td>
-                    <td style="vertical-align: middle; padding-left: 5px;">
+                    <td style="vertical-align: middle; padding-left: 30px;">
                         <table cellpadding="0" cellspacing="0" border="0">
                             <tr>
                                 <td style="font-family: 'Montserrat', Arial, sans-serif; font-size: 18px; font-weight: 600; color: #2c2c2c; padding-bottom: 2px;">
@@ -191,6 +191,13 @@ class SignatureGenerator {
                                 </td>
                             </tr>
                         </table>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="padding-top: 20px;">
+                        <div style="font-family: 'Montserrat', Arial, sans-serif; font-size: 9px; color: #666666; line-height: 1.3; border-top: 1px solid #e0e0e0; padding-top: 10px; margin-top: 10px;">
+                            <strong>WARNING:</strong> "Privileged / Confidential information may be contained in this message. If you are not the intended addressee, you must not copy, distribute or take any action in reliance thereon. Communication of any information in this email to any unauthorised person is an offence under the Official Secrets Act (Cap 213). Please notify the sender immediately if you receive this in error."
+                        </div>
                     </td>
                 </tr>
             </table>
