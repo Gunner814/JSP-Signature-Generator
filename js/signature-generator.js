@@ -126,11 +126,17 @@ class SignatureGenerator {
             data.website.replace(/^https?:\/\//, '').replace(/\/$/, '') : 
             'www.jsquarephotography.com';
 
+        // Define fallback URLs for images
+        const logoFallback = 'https://lh3.googleusercontent.com/d/18CHKWR2qgRKP6UOqECWTkQmmJdJzV9G1';
+        const instagramFallback = 'https://lh3.googleusercontent.com/d/1ltjVJs9m7XOwCKySj7GAqfDYlReQ5I2-';
+        const facebookFallback = 'https://lh3.googleusercontent.com/d/1YAxVzO2Ro5tLFYup4IGoHKeGvXWSEx3b';
+        const linkedinFallback = 'https://lh3.googleusercontent.com/d/1Gj5zAHhTei0LBw3MMZx_SMLtJO9EaTXt';
+
         return `
             <table cellpadding="0" cellspacing="0" border="0" style="font-family: 'Montserrat', Arial, sans-serif; color: #333333; max-width: 500px; width: 100%;">
                 <tr>
                     <td style="vertical-align: middle; padding-right: 15px; width: 130px;">
-                        <img src="logo.png" width="115" alt="J Square Photography Logo" style="display: block; height: auto; max-height: 130px;">
+                        <img src="${logoFallback}" onerror="this.onerror=null;this.src='logo.png'" width="115" alt="J Square Photography Logo" style="display: block; height: auto; max-height: 130px;">
                     </td>
                     <td style="vertical-align: middle; padding-left: 30px;">
                         <table cellpadding="0" cellspacing="0" border="0">
@@ -168,21 +174,21 @@ class SignatureGenerator {
                                             ${data.instagram ? `
                                             <td style="padding-right: 10px;">
                                                 <a href="${instagramUrl}" style="text-decoration: none;">
-                                                    <img src="1.png" width="24" height="24" alt="Instagram" style="display: block; border: 0;">
+                                                    <img src="${instagramFallback}" onerror="this.onerror=null;this.src='1.png'" width="24" height="24" alt="Instagram" style="display: block; border: 0;">
                                                 </a>
                                             </td>
                                             ` : ''}
                                             ${data.facebook ? `
                                             <td style="padding-right: 10px;">
                                                 <a href="${data.facebook}" style="text-decoration: none;">
-                                                    <img src="2.png" width="24" height="24" alt="Facebook" style="display: block; border: 0;">
+                                                    <img src="${facebookFallback}" onerror="this.onerror=null;this.src='2.png'" width="24" height="24" alt="Facebook" style="display: block; border: 0;">
                                                 </a>
                                             </td>
                                             ` : ''}
                                             ${data.linkedin ? `
                                             <td style="padding-right: 10px;">
                                                 <a href="${data.linkedin}" style="text-decoration: none;">
-                                                    <img src="3.png" width="24" height="24" alt="LinkedIn" style="display: block; border: 0;">
+                                                    <img src="${linkedinFallback}" onerror="this.onerror=null;this.src='3.png'" width="24" height="24" alt="LinkedIn" style="display: block; border: 0;">
                                                 </a>
                                             </td>
                                             ` : ''}
